@@ -1,0 +1,218 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Create_WorkShop_tutor"
+    android:background="@drawable/background_welcome">
+
+    <ScrollView
+        android:id="@+id/content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintHeight_percent="0.7"
+        app:layout_constraintBottom_toTopOf="@+id/next"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/create_note_text">
+            <TextView
+                android:id="@+id/create_text"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/workshop"
+                android:textColor="@color/blue1"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="20dp"/>
+
+            <TextView
+                android:id="@+id/create_note_text"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/workshop_desciption"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_marginBottom="25dp"/>
+
+
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/upload_profile"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:textAlignment="center"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btnImage"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="100dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/app_name"
+                        app:srcCompat="@drawable/icon_person" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btnCamera"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    app:cardCornerRadius="100dp"
+                    android:layout_marginTop="-40dp"
+                    android:layout_marginStart="120dp"
+                    android:padding="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnImage">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/app_name"
+                        app:srcCompat="@drawable/icon_camera" />
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:id="@+id/example"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/upload_pro"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/grey"
+                android:fontFamily="@font/poppins_semibold"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout_name"
+                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:hint="Tutor Name"
+                app:boxBackgroundColor="@color/blue2"
+                app:boxStrokeColor="@color/blue1"
+                app:endIconMode="clear_text"
+                app:startIconDrawable="@drawable/icon_person">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/text_input_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout_position"
+                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="50dp"
+                android:hint="Tutor's Major"
+                app:boxBackgroundColor="@color/blue2"
+                app:boxStrokeColor="@color/blue1"
+                app:endIconMode="clear_text"
+                app:startIconDrawable="@drawable/icon_work">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/text_input_position"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+    <TextView
+        android:id="@+id/btnPrevious"
+        android:layout_marginTop="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins_semibold"
+        app:layout_constraintBottom_toTopOf="@+id/next"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.9"
+        android:text="Previous" />
+    <Button
+        android:id="@+id/next"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue1"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/next"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.9"
+        app:cornerRadius="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Back to Home"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/space_buttom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Space
+        android:id="@+id/space_buttom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

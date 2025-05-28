@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginEnd="10dp"
+    android:layout_marginStart="10dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/poppins_extrabold"
+            android:text="Send mail"
+            android:textSize="30sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="Message"
+            android:backgroundTint="@color/white"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:lines="20"
+                android:gravity="top"
+                android:overScrollMode="always"
+                android:scrollbarStyle="insideInset"
+                android:scrollHorizontally="false"
+                android:scrollbars="vertical"
+                android:textColor="@color/black"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:id="@+id/detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="24dp"
+            android:layout_gravity="center"
+            android:text="The content format can be HTML !"
+            android:textColor="@color/grey"
+            android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/confirm"
+                android:layout_marginTop="32dp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/blue1"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Send"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                android:layout_gravity="center"/>
+            <Button
+                android:id="@+id/cancel"
+                android:layout_marginBottom="32dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/grey"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Cancel"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                android:layout_gravity="center"/>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

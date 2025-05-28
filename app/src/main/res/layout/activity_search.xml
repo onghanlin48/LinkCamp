@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Search_">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="10dp"
+
+                    android:foregroundGravity="center_vertical"
+                    android:src="@drawable/icon_back" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@+id/back"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/search_bar"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/rounded_background"
+                        android:padding="8dp">
+
+                        <!-- Search Input -->
+                        <EditText
+                            android:id="@+id/search_input"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_toStartOf="@+id/search_icon"
+                            android:background="@null"
+                            android:hint="Search..."
+                            android:inputType="text"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="40dp"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/darker_gray" />
+
+                        <!-- Search Icon -->
+                        <ImageView
+                            android:id="@+id/search_icon"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="Search Icon"
+                            android:src="@drawable/ic_search"
+                            app:tint="@color/black" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/bar"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:orientation="horizontal"
+            android:background="@drawable/border">
+
+            <TextView
+                android:id="@+id/user"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:padding="@dimen/_7sdp"
+                android:textAlignment="center"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="User"/>
+            <TextView
+                android:id="@+id/post"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:padding="@dimen/_7sdp"
+                android:textAlignment="center"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="Post"/>
+            <TextView
+                android:id="@+id/learn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_7sdp"
+                android:textAlignment="center"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="bold"
+                android:text="Learn"/>
+            <TextView
+                android:id="@+id/work"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_7sdp"
+                android:textAlignment="center"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="bold"
+                android:text="Work"/>
+            <TextView
+                android:id="@+id/workshop"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_7sdp"
+                android:textAlignment="center"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="bold"
+                android:text="Workshop"/>
+        </LinearLayout>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_300sdp"
+            android:layout_gravity="center_horizontal"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/user_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:visibility="gone"
+            app:reverseLayout="true" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/post_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:visibility="gone"
+            app:reverseLayout="true" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/learn_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:visibility="gone"
+            app:reverseLayout="true" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/work_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:visibility="gone"
+            app:reverseLayout="true" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/workshop_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:visibility="gone"
+            app:reverseLayout="true" />
+    </LinearLayout>
+
+</RelativeLayout>

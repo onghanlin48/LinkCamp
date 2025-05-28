@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="380dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginStart="10dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/poppins_extrabold"
+            android:text="Payment"
+            android:textSize="30sp" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_layout_pay_cycle"
+            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="Payment Method"
+            app:boxBackgroundColor="@color/blue2"
+            app:boxStrokeColor="@color/blue1"
+            app:endIconMode="dropdown_menu"
+            app:helperText="Select Pay cycle"
+            app:startIconDrawable="@drawable/icon_pay">
+
+            <AutoCompleteTextView
+                android:id="@+id/auto_complete_pay_cycle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="none"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/l_card_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:hint="Card Number"
+                android:backgroundTint="@color/white"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/card_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:gravity="top"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollHorizontally="false"
+                    android:scrollbars="vertical"
+                    android:maxLength="19"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/l_date"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:hint="Expiry Date (MMYY)"
+                    android:backgroundTint="@color/white"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:gravity="top"
+                        android:overScrollMode="always"
+                        android:scrollbarStyle="insideInset"
+                        android:scrollHorizontally="false"
+                        android:scrollbars="vertical"
+                        android:maxLength="4"
+                        android:textColor="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/l_cvv"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp"
+                    android:layout_height="wrap_content"
+                    android:hint="cvv"
+                    android:backgroundTint="@color/white"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/cvv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:gravity="top"
+                        android:overScrollMode="always"
+                        android:scrollbarStyle="insideInset"
+                        android:scrollHorizontally="false"
+                        android:scrollbars="vertical"
+                        android:maxLength="3"
+                        android:textColor="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/l_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:hint="Name on Card"
+                android:backgroundTint="@color/white"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:gravity="top"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollHorizontally="false"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/confirm"
+            android:layout_marginTop="32dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/blue1"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Confirm"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:cornerRadius="10dp"
+            android:layout_gravity="center"/>
+        <Button
+            android:id="@+id/cancel"
+            android:layout_marginBottom="32dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/grey"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Cancel"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:cornerRadius="10dp"
+            android:layout_gravity="center"/>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

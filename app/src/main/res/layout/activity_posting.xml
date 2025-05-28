@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".Posting">
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/icon_close"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/button_en"
+        android:enabled="false"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/post"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/post"
+        app:layout_constraintWidth_percent="0.9">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/transparent"
+                android:textColorHint="@color/grey"
+                android:textColor="@color/black"
+                android:hint="@string/description" />
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="20dp"
+                android:scaleType="centerInside"
+                android:layout_gravity="center"/>
+            <ImageView
+                android:id="@+id/delete"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:visibility="gone"
+                android:layout_marginTop="20dp"
+                android:scaleType="centerInside"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_delete"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/photo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/icon_photo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/content" />
+</androidx.constraintlayout.widget.ConstraintLayout>

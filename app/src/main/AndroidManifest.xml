@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LinkCamp"
+        tools:targetApi="31">
+        <activity
+            android:name=".Comment"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Search_"
+            android:exported="false" />
+        <activity
+            android:name=".Change_email"
+            android:exported="false" />
+        <activity
+            android:name=".Edit_profile"
+            android:exported="false" />
+        <activity
+            android:name=".Channel"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Chat_Home"
+            android:exported="false" />
+        <activity
+            android:name=".Chat"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".View_Donation"
+            android:exported="false" />
+        <activity
+            android:name=".View_Applied"
+            android:exported="false" />
+        <activity
+            android:name=".View_Resume"
+            android:exported="false" />
+        <activity
+            android:name=".View_Apply"
+            android:exported="false" />
+        <activity
+            android:name=".Apply_Work"
+            android:exported="false" />
+        <activity
+            android:name=".View_Work"
+            android:exported="false" />
+        <activity
+            android:name=".create_work_salary"
+            android:exported="false" />
+        <activity
+            android:name=".View_learn"
+            android:exported="false" />
+        <activity
+            android:name=".Create_learning"
+            android:exported="false" />
+        <activity
+            android:name=".Workshop_Applicant"
+            android:exported="false" />
+        <activity
+            android:name=".Create_work"
+            android:exported="false" />
+        <activity
+            android:name=".Profile_view"
+            android:exported="false" />
+        <activity
+            android:name=".View_Workshop"
+            android:exported="false" />
+        <activity
+            android:name=".Create_WorkShop_tutor"
+            android:exported="false" />
+        <activity
+            android:name=".Create_Workshop_Cover"
+            android:exported="false" />
+        <activity
+            android:name=".Create_Workshop"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="default" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".Posting"
+            android:exported="false" />
+        <activity
+            android:name=".Home"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".forgot_password"
+            android:exported="false" />
+        <activity
+            android:name=".SSM_Certificates"
+            android:exported="false"
+            android:theme="@style/Theme.LinkCamp" />
+        <activity
+            android:name=".Upload_Certificates"
+            android:exported="false" />
+        <activity
+            android:name=".term"
+            android:exported="false" />
+        <activity
+            android:name=".Upload_profile"
+            android:exported="false" />
+        <activity
+            android:name=".Upload_IC_Back"
+            android:exported="false" />
+        <activity
+            android:name=".Upload_IC_Front"
+            android:exported="false" />
+        <activity
+            android:name=".Create_password"
+            android:exported="false" />
+        <activity
+            android:name=".OTPv"
+            android:exported="false" />
+        <activity
+            android:name=".Create_account"
+            android:exported="false" />
+        <activity
+            android:name=".login_page"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="CLOUDINARY_URL"
+            android:value="cloudinary://184762337876237:SM6tkXj_NUCpZF5qCHL7dV-N8LI@dakrinvpf" />
+
+        <service
+            android:name=".FCMNotificationService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

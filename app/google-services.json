@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "355791850750",
+    "firebase_url": "https://linkcamp-7fb6a-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "linkcamp-7fb6a",
+    "storage_bucket": "linkcamp-7fb6a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:355791850750:android:275394d72f04549502a9af",
+        "android_client_info": {
+          "package_name": "com.um.linkcamp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQ-OghMp0N1K0ZsKdQ-ZJwIyB5Fhmjh20"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

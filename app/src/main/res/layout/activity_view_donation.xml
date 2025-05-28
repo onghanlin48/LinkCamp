@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".View_Applied">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/icon_back" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_toEndOf="@+id/back"
+                    android:maxLines="1"
+                    android:text="Donation"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bar"
+
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-5dp"
+            android:layout_marginEnd="-5dp"
+            android:layout_gravity="center"
+            android:background="@drawable/border"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/get"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/receive_withdraw"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:layout_marginEnd="20dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                android:fontFamily="@font/poppins_semibold"/>
+
+            <TextView
+                android:id="@+id/give"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/send"
+                android:padding="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                android:fontFamily="@font/poppins_semibold"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/receive_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearLayout"
+        android:layout_below="@+id/select"
+
+        android:padding="16dp"
+        app:reverseLayout="true" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/send_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout"
+        android:padding="16dp"
+        android:visibility="gone"
+        android:layout_below="@+id/select"
+        app:reverseLayout="true" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/total"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="RM 250"
+                android:textColor="@color/blue1"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/withdraw"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="@color/blue1"
+                android:text="Withdraw" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

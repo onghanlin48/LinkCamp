@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_8sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/image_profile"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:background="@drawable/background_image"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/text_message"
+        app:riv_oval="true"/>
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_10ssp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:text="ONG HAN LIN"
+        app:layout_constraintStart_toStartOf="@id/text_message"
+        app:layout_constraintBottom_toTopOf="@id/text_message"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/text_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:background="@drawable/background_received_message"
+        android:paddingTop="@dimen/_8sdp"
+        android:paddingStart="@dimen/_12sdp"
+        android:paddingEnd="@dimen/_12sdp"
+        android:paddingBottom="@dimen/_8sdp"
+        app:layout_constraintWidth_max="wrap"
+        android:textColor="@color/white"
+        android:textIsSelectable="true"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintStart_toEndOf="@id/image_profile"
+        app:layout_constraintTop_toBottomOf="@id/textName"
+        app:layout_constraintWidth_percent="0.75"/>
+    <TextView
+        android:id="@+id/textDateTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/_8ssp"
+        app:layout_constraintStart_toStartOf="@id/text_message"
+        app:layout_constraintTop_toBottomOf="@id/text_message"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

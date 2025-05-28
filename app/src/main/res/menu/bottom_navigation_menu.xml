@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottom_home"
+        android:title="Home"
+        android:icon="@drawable/icon_home"/>
+
+    <item
+        android:id="@+id/bottom_learn"
+        android:title="Learn"
+        android:icon="@drawable/icon_book"/>
+
+    <item
+        android:title=""
+        android:enabled="true"/>
+
+    <item
+        android:id="@+id/bottom_jod"
+        android:title="Job"
+        android:icon="@drawable/icon_work"/>
+
+    <item
+        android:id="@+id/bottom_workshop"
+        android:title="WorkShop"
+        android:icon="@drawable/icon_workshop"/>
+</menu>

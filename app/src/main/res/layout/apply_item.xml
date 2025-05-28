@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:elevation="10dp"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btnImage_post"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="100dp">
+            <ImageView
+                android:id="@+id/profile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_name"
+                app:srcCompat="@drawable/icon_person" />
+        </androidx.cardview.widget.CardView>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="2">
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:maxLines="1"
+                android:textSize="18sp"
+                android:layout_marginEnd="5dp"
+                android:ellipsize="end"
+                android:text="ONG HAN LIN fdf df df df d fs fsd fsd f sdf"/>
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:layout_marginEnd="5dp"
+                android:ellipsize="end"
+                android:text="onghanlin48@gmail.com"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+            <Button
+                android:layout_marginTop="10dp"
+                android:id="@+id/view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/blue1"
+                android:text="View"/>
+            <Button
+                android:layout_marginBottom="10dp"
+                android:id="@+id/send_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/grey"
+                android:text="Email"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

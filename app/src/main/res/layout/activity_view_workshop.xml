@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".View_Workshop">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/cover"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/wfh" />
+
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_extrabold"
+                android:text="Tiltle Workshop"
+                android:textIsSelectable="true"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txt_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location"
+                android:textIsSelectable="true"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/txt_open"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Open Register Until : "
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/layout_border_tint"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btnProfile"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="100dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/app_name"
+                        app:srcCompat="@drawable/icon_person" />
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txt_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1000"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="ONG HAN LIN"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/follow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/icon_add"
+                            app:tint="@color/blue1" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/txt_role"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Company" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/overview"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/date_and_time"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:text="13/12/24 13.00 - 17/12/24 18.00"
+                android:textColor="@color/grey"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textIsSelectable="true"
+                android:text="Description Workshop"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/grey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/tutor"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/tutor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="50dp"
+                android:padding="16sp"
+                android:scrollbars="horizontal"
+                app:reverseLayout="true" />
+
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:backgroundTint="@color/blue1"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/register" />
+        <Button
+            android:id="@+id/btnApplicant"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:layout_margin="5dp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/blue1"
+            android:visibility="gone"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Applicants"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

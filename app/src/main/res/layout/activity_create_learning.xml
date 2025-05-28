@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Create_learning"
+    android:background="@drawable/background_welcome">
+
+    <ScrollView
+        android:id="@+id/content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintHeight_percent="0.85"
+        app:layout_constraintBottom_toTopOf="@+id/next"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/create_note_text">
+            <TextView
+                android:id="@+id/create_text"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Upload Learning Materials"
+                android:textAlignment="center"
+                android:textColor="@color/blue1"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="20dp"/>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout_title"
+                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:hint="Title / Subject"
+                app:boxBackgroundColor="@color/blue2"
+                app:boxStrokeColor="@color/blue1"
+                app:endIconMode="clear_text"
+                app:startIconDrawable="@drawable/icon_book">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/text_input_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Open Channel for this Material" />
+            <LinearLayout
+                android:id="@+id/upload_profile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/layout_border"
+                android:layout_marginBottom="30dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <ImageView
+                    android:id="@+id/profile"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="10dp"
+                    app:srcCompat="@drawable/upload_img"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:id="@+id/text1_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Upload Channel Profile"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text2_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="PNG and jpg format only"
+                    android:textAlignment="center"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout_description"
+                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:hint="Description (Option)"
+                app:boxBackgroundColor="@color/blue2"
+                app:boxStrokeColor="@color/blue1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/text_input_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:lines="8"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollHorizontally="false"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/black"
+                    android:gravity="top"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <LinearLayout
+                android:id="@+id/upload_c"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/layout_border"
+                android:layout_marginBottom="30dp"
+                android:orientation="vertical">
+                <com.github.barteksc.pdfviewer.PDFView
+                    android:id="@+id/pdfView"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"/>
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="10dp"
+                    app:srcCompat="@drawable/upload_img"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Upload Learning Materials"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/upload_pdf"
+                    android:textAlignment="center"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/next"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue1"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/next"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.9"
+        app:cornerRadius="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Back"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/space_buttom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Space
+        android:id="@+id/space_buttom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".create_work_salary"
+    android:background="@drawable/background_welcome">
+
+    <ScrollView
+        android:id="@+id/content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintHeight_percent="0.7"
+        app:layout_constraintBottom_toTopOf="@+id/next"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/create_note_text">
+            <TextView
+                android:id="@+id/create_text"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Recruitment"
+                android:textAlignment="center"
+                android:textColor="@color/blue1"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="20dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout_pay_cycle"
+                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:hint="Pay Cycle"
+                app:boxBackgroundColor="@color/blue2"
+                app:boxStrokeColor="@color/blue1"
+                app:endIconMode="dropdown_menu"
+                app:helperText="Select Pay cycle"
+                app:startIconDrawable="@drawable/icon_pay">
+
+                <AutoCompleteTextView
+                    android:id="@+id/auto_complete_pay_cycle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="none"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout_minimum_salary"
+                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:hint="Minimun Salary / Salary (RM)"
+                app:boxBackgroundColor="@color/blue2"
+                app:boxStrokeColor="@color/blue1"
+                app:endIconMode="clear_text"
+                app:startIconDrawable="@drawable/icon_money">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/text_input_minimum_salary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout_max_salary"
+                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:hint="Maximum Salary (RM)"
+                app:boxBackgroundColor="@color/blue2"
+                app:boxStrokeColor="@color/blue1"
+                app:endIconMode="clear_text"
+                app:helperText="If Salary no minimum and maximum just fill in minimum salary"
+                app:startIconDrawable="@drawable/icon_money">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/text_input_job_max_salary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout_description"
+                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:hint="Job Description"
+                app:boxBackgroundColor="@color/blue2"
+                app:boxStrokeColor="@color/blue1"
+                app:endIconMode="clear_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/text_input_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:gravity="top"
+                    android:lines="6" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout_responsibility"
+                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:hint="Key Responsibility"
+                app:boxBackgroundColor="@color/blue2"
+                app:boxStrokeColor="@color/blue1"
+                app:endIconMode="clear_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/text_input_responsibility"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:gravity="top"
+                    android:lines="6" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout_requirement"
+                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="40dp"
+                android:hint="Requirements"
+                app:boxBackgroundColor="@color/blue2"
+                app:boxStrokeColor="@color/blue1"
+                app:endIconMode="clear_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/text_input_requirement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:gravity="top"
+                    android:lines="6" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+    </ScrollView>
+    <TextView
+        android:id="@+id/btnPrevious"
+        android:layout_marginTop="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins_semibold"
+        app:layout_constraintBottom_toTopOf="@+id/next"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.9"
+        android:text="Previous" />
+    <Button
+        android:id="@+id/next"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue1"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Submit"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.9"
+        app:cornerRadius="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Back to Home"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/space_buttom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Space
+        android:id="@+id/space_buttom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
